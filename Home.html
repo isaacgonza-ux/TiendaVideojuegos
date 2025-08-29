@@ -75,6 +75,74 @@
         object-position: center;
         background: #111; /* Fondo oscuro para las franjas */
     }
+
+        /*menú*/
+    .offcanvas-categorias {
+        background: #222;
+    }
+    .offcanvas-categorias .categoria-link {
+        color: white;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        transition: background 0.2s, color 0.2s;
+    }
+    .offcanvas-categorias .categoria-link:hover {
+        background: orange;
+        color: black;
+    }
+    .categoria-link {
+        color: #222;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        font-weight: 500;
+        transition: background 0.2s, color 0.2s;
+    }
+.categoria-link:hover {
+    background: #ffe082;
+    color: #111;
+}
+
+
+    /*Noticias blog*/
+        .news-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        }
+
+        .news-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        filter: brightness(70%);
+        transition: transform 0.3s ease;
+        }
+
+        .news-card:hover img {
+        transform: scale(1.05);
+        }
+
+        .news-card .overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        color: white;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        }
+
+        .news-card h5 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+        }
+
    
     
     
@@ -83,112 +151,9 @@
 
 </head>
 <body>
-    <style>
-        header{
-            background: #111; color: white; }
-        .top-bar {
-        background: #000;
-        font-size: 14px;
-        padding: 5px 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        }
-        .top-bar a {
-        background: orange;
-        color: black;
-        padding: 2px 8px;
-        text-decoration: none;
-        border-radius: 3px;
-        font-weight: bold;
-        }
-        .navbar-custom {
-        background: #1c1c1c;
-        padding: 10px 20px;
-        }
-        .navbar-custom .navbar-brand {
-        font-weight: bold;
-        color: orange;
-        }
-        .search-bar input {
-        border-radius: 0;
-        }
-        .categories {
-        background: #222;
-        }
-        .categories a {
-        color: white;
-        padding: 10px 15px;
-        display: inline-block;
-        text-decoration: none;
-        }
-        .categories a:hover {
-        background: orange;
-        color: black;
-        }
-        .social-icons a {
-        color: orange;
-        margin-left: 10px;
-        font-size: 18px;
-            }
-        .carousel-caption {
-        right: 5%;
-        left: auto;
-        text-align: right;
-        background: rgba(0,0,0,0.4);
-        border-radius: 10px;
-        padding: 20px 30px;
-        max-width: 40%;
-        top: 50%;
-        transform: translateY(-50%);
-        bottom: auto;
-    }
-
-        .carousel-item img {
-        width: 100%;
-        height: 800px;
-        object-fit: cover;
-        object-position: center;
-        background: #111; /* Fondo oscuro para las franjas */
-    }
    
-
-    /*Noticias blog*/
-    .news-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.news-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  filter: brightness(70%);
-  transition: transform 0.3s ease;
-}
-
-.news-card:hover img {
-  transform: scale(1.05);
-}
-
-.news-card .overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  color: white;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-}
-
-.news-card h5 {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-    
-    
+            
+        
 
     </style>
     <header>
@@ -205,7 +170,7 @@
         <nav class="navbar navbar-custom">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">INFINITYPLAY
-                    <img src="../tienda_videojuegos/img/logo infinity.png" alt="logo" width="200" height="100">
+                    <img src="../tienda_videojuegos/img/logo infinity.png" alt="logo" width="100" height="70">
                 </a>
 
             
@@ -247,7 +212,9 @@
 
          <!-- Menú categorías -->
         <div class="categories text-center">
-            <a href="#">CATEGORIAS</a>
+            <button class="btn btn-warning me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategorias" aria-controls="offcanvasCategorias">
+                CATEGORIAS
+            </button>
             <a href="#">PS3</a>
             <a href="#">PS4</a>
             <a href="#">PS5</a>
@@ -260,6 +227,40 @@
             <a href="#">PACKS</a>
             <a href="#">OPINIONES</a>
             <a href="#">PREMIOS</a>
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCategorias" aria-labelledby="offcanvasCategoriasLabel">
+            <div class="offcanvas-header">
+               <h5 class="offcanvas-title text-warning fw-bold" id="offcanvasCategoriasLabel">
+                    <i class="fas fa-th-large me-2"></i>Categorías
+                </h5>
+                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+            </div>
+            <div class="offcanvas-body">
+                 <!-- Perfil de usuario -->
+                <div class="d-flex align-items-center mb-4 p-2 rounded" style="background:#f5f5f5;">
+                    <img src="https://ui-avatars.com/api/?name=Invitado&background=222&color=fff" alt="Perfil" width="48" height="48" class="rounded-circle me-3">
+                    <div>
+                        <div class="fw-bold">Invitado</div>
+                        <a href="login.html" class="btn btn-sm btn-warning mt-1">Iniciar sesión</a>
+                    </div>
+                </div>
+               <ul class="list-unstyled mb-0">
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-warning"></i>PS3</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-warning"></i>PS4</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-warning"></i>PS5</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-desktop me-2 text-warning"></i>PC</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fab fa-xbox me-2 text-success"></i>XBOX</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-danger"></i>NINTENDO</a></li>
+                    <li><hr class="my-2"></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gift me-2 text-primary"></i>GIFT CARD</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-bolt me-2 text-warning"></i>RECARGAS</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-crown me-2 text-warning"></i>MEMBRESIAS</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-box-open me-2 text-info"></i>PACKS</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-star me-2 text-warning"></i>OPINIONES</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-trophy me-2 text-warning"></i>PREMIOS</a></li>
+                </ul>
+            </div>
         </div>
 
        
@@ -405,9 +406,9 @@
             <!-- Producto 1 -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card h-100 shadow">
-                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202502/2711/cbc6c3135660ec68eacc766959a766b36d7ce3fa6010ca88.png" class="card-img-top" alt="Juego 1">
+                        <img src="../tienda_videojuegos/img/thelast.png" class="card-img-top" alt="Juego 1">
                         <div class="card-body">
-                            <h5 class="card-title">Death Strading</h5>
+                            <h5 class="card-title">The last of us part l</h5>
                             <p class="text-muted text-decoration-line-through">$124,500 CLP</p>
                             <p class="fw-bold fs-5 text-success">$24,900 CLP</p>
                             <button class="btn btn-warning w-100 mb-2">🛒 Comprar</button>
@@ -422,11 +423,11 @@
     <!-- Producto 2 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100 shadow">
-                    <img src="../tienda_videojuegos/img/1.png" class="card-img-top" alt="Juego 2">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202312/0117/315718bce7eed62e3cf3fb02d61b81ff1782d6b6cf850fa4.png" class="card-img-top" alt="Juego 2">
                     <div class="card-body">
-                        <h5 class="card-title">Metal Gear Solid</h5>
-                        <p class="text-muted text-decoration-line-through">$144,500 CLP</p>
-                        <p class="fw-bold fs-5 text-success">$28,900 CLP</p>
+                        <h5 class="card-title">The last of us part ll</h5>
+                        <p class="text-muted text-decoration-line-through">$80,500 CLP</p>
+                        <p class="fw-bold fs-5 text-success">$20,00 CLP</p>
                         <button class="btn btn-warning w-100 mb-2">🛒 Comprar</button>
                         <div class="d-flex justify-content-between">
                             <button class="btn btn-outline-dark btn-sm">Detalles</button>
@@ -439,9 +440,9 @@
             <!-- Producto 3 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100 shadow">
-                    <img src="../tienda_videojuegos/img/2.png" class="card-img-top" alt="Juego 3">
+                    <img src="../tienda_videojuegos/img/5.png" class="card-img-top" alt="Juego 3">
                     <div class="card-body">
-                        <h5 class="card-title">Fc 26</h5>
+                        <h5 class="card-title">God of war</h5>
                         <p class="text-muted text-decoration-line-through">$144,500 CLP</p>
                         <p class="fw-bold fs-5 text-success">$28,900 CLP</p>
                         <button class="btn btn-warning w-100 mb-2">🛒 Comprar</button>
@@ -456,9 +457,9 @@
             <!-- Producto 4 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100 shadow">
-                    <img src="../tienda_videojuegos/img/3.png" class="card-img-top" alt="Juego 4">
+                    <img src="../tienda_videojuegos/img/6.png" class="card-img-top" alt="Juego 4">
                     <div class="card-body">
-                        <h5 class="card-title">Demon Slayer</h5>
+                        <h5 class="card-title">God of war Ragnarok</h5>
                         <p class="text-muted text-decoration-line-through">$144,500 CLP</p>
                         <p class="fw-bold fs-5 text-success">$28,900 CLP</p>
                         <button class="btn btn-warning w-100 mb-2">🛒 Comprar</button>
@@ -487,9 +488,9 @@
             <!-- Producto 1 -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card h-100 shadow">
-                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202502/2711/cbc6c3135660ec68eacc766959a766b36d7ce3fa6010ca88.png" class="card-img-top" alt="Juego 1">
+                        <img src="../tienda_videojuegos/img/red.png" class="card-img-top" alt="Juego 1">
                         <div class="card-body">
-                            <h5 class="card-title">Death Strading</h5>
+                            <h5 class="card-title">Red dead redemption ll</h5>
                             <p class="text-muted text-decoration-line-through">$124,500 CLP</p>
                             <p class="fw-bold fs-5 text-success">$24,900 CLP</p>
                             <button class="btn btn-warning w-100 mb-2">🛒 Comprar</button>
@@ -504,9 +505,9 @@
     <!-- Producto 2 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100 shadow">
-                    <img src="../tienda_videojuegos/img/1.png" class="card-img-top" alt="Juego 2">
+                    <img src="../tienda_videojuegos/img/7.png" class="card-img-top" alt="Juego 2">
                     <div class="card-body">
-                        <h5 class="card-title">Metal Gear Solid</h5>
+                        <h5 class="card-title">Grand theft auto Vl</h5>
                         <p class="text-muted text-decoration-line-through">$144,500 CLP</p>
                         <p class="fw-bold fs-5 text-success">$28,900 CLP</p>
                         <button class="btn btn-warning w-100 mb-2">🛒 Comprar</button>
@@ -521,9 +522,9 @@
             <!-- Producto 3 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100 shadow">
-                    <img src="../tienda_videojuegos/img/2.png" class="card-img-top" alt="Juego 3">
+                    <img src="../tienda_videojuegos/img/8.png" class="card-img-top" alt="Juego 3">
                     <div class="card-body">
-                        <h5 class="card-title">Fc 26</h5>
+                        <h5 class="card-title">Grand theft auto V</h5>
                         <p class="text-muted text-decoration-line-through">$144,500 CLP</p>
                         <p class="fw-bold fs-5 text-success">$28,900 CLP</p>
                         <button class="btn btn-warning w-100 mb-2">🛒 Comprar</button>
@@ -538,9 +539,9 @@
             <!-- Producto 4 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100 shadow">
-                    <img src="../tienda_videojuegos/img/3.png" class="card-img-top" alt="Juego 4">
+                    <img src="../tienda_videojuegos/img/13.png" class="card-img-top" alt="Juego 4">
                     <div class="card-body">
-                        <h5 class="card-title">Demon Slayer</h5>
+                        <h5 class="card-title">Fc 25</h5>
                         <p class="text-muted text-decoration-line-through">$144,500 CLP</p>
                         <p class="fw-bold fs-5 text-success">$28,900 CLP</p>
                         <button class="btn btn-warning w-100 mb-2">🛒 Comprar</button>
