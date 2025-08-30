@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;              /* más compacto */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 350px;           /* antes 500px */
+            width: 100%;
+        }
+
+        /* Estilo para el mensaje de descuento */
+        .discount-message {
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            padding: 10px;              /* más compacto */
+            text-align: center;
+            margin-bottom: 15px;        /* más compacto */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .discount-message .discount-text {
+            font-size: 1.3rem;          /* más pequeño */
+            font-weight: bold;
+            color: #9b4dca;
+            margin-right: 10px;
+        }
+
+        .discount-message .discount-icon {
+            font-size: 1.2rem;          /* más pequeño */
+            margin-left: 10px;
+        }
+
+        /* Estilo del botón amarillo */
+        .btn-yellow {
+            background-color: #ffc107;
+            color: white;
+            font-size: 1rem;            /* más pequeño */
+            padding: 8px;               /* más compacto */
+        }
+
+        .btn-yellow:hover {
+            background-color: #e0a800;
+            color: white;
+        }
+
+        /* Estilo del botón cancelar */
+        .btn-cancel {
+            background-color: transparent;
+            border: 1px solid #6c757d;
+            color: #6c757d;
+            font-size: 0.9rem;          /* más compacto */
+            padding: 6px;               /* más compacto */
+        }
+
+        .btn-cancel:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Estilo de los campos de entrada */
+        .form-control {
+            font-size: 1rem;            /* más pequeño */
+            padding: 8px;               /* más compacto */
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <div class="form-container">
+        <!-- Mensaje de descuento -->
+        <div class="discount-message">
+            <span class="discount-text">20% de descuento por Registrarte</span>
+            <span class="discount-icon">🎮</span>
+        </div>
+
+        <h4 class="text-center mb-3">Crea tu cuenta</h4>
+        <form>
+            <!-- E-mail -->
+            <div class="mb-2">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="communitymember@sage.com" required>
+            </div>
+
+            <!-- Nombre -->
+            <div class="mb-2">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="Juan" required>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-2">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="********" required>
+            </div>
+
+            <!-- Confirmar Contraseña -->
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="********" required>
+            </div>
+
+            <!-- Botones -->
+            <div class="d-grid mb-2">
+               <a href="Home.html" class="btn btn-yellow text-center">Registrarse</a>
+            </div>
+
+            <div class="d-grid">
+                <button type="button" class="btn btn-cancel">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
