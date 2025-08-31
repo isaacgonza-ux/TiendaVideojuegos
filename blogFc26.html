@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EA SPORTS FC™ 26</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b981cc938e.js" crossorigin="anonymous"></script>
+  <style>
+    
+    /*fondo*/
+    body {
+        background-image: url('https://gamingbolt.com/wp-content/uploads/2024/07/ea-sports-fc-25-image-2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+    }
+
+    
+    body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de oscuridad aquí */
+    z-index: -1;
+    }
+    /* Portada */
+    .portada {
+      background-image: url('../tienda_videojuegos/img/FC26-UECover-4x3.avif');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .portada h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* Tarjetas de contenido */
+    .feature-card img {
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .feature-card h2 {
+      font-size: 1.25rem;
+      margin-top: 15px;
+       text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+       text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+    }
+
+    .seccion-intermedia {
+        background-color: #121314;
+        padding: 40px 20px;
+        border-radius: 10px;
+        }
+
+        /*menu*/
+         header{
+            background: #111; color: white; }
+        .top-bar {
+        background: #000;
+        font-size: 14px;
+        padding: 5px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .top-bar a {
+        background: orange;
+        color: black;
+        padding: 2px 8px;
+        text-decoration: none;
+        border-radius: 3px;
+        font-weight: bold;
+        }
+        .navbar-custom {
+        background: #1c1c1c;
+        padding: 10px 20px;
+        }
+        .navbar-custom .navbar-brand {
+        font-weight: bold;
+        color: orange;
+        }
+        .search-bar input {
+        border-radius: 0;
+        }
+        .categories {
+        background: #222;
+        }
+        .categories a {
+        color: white;
+        padding: 10px 15px;
+        display: inline-block;
+        text-decoration: none;
+        }
+        .categories a:hover {
+        background: orange;
+        color: black;
+        }
+        .social-icons a {
+        color: orange;
+        margin-left: 10px;
+        font-size: 18px;
+            }
+
+            .offcanvas-categorias {
+        background: #222;
+    }
+    .offcanvas-categorias .categoria-link {
+        color: white;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        transition: background 0.2s, color 0.2s;
+    }
+    .offcanvas-categorias .categoria-link:hover {
+        background: orange;
+        color: black;
+    }
+    .categoria-link {
+        color: #222;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        font-weight: 500;
+        transition: background 0.2s, color 0.2s;
+    }
+    .categoria-link:hover {
+        background: #a9a493;
+        color: #111;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+             <!--barra superior-->
+
+        <div class="top-bar">
+            <span>Eleva tu Juego en 2025 🎮 : ¡Ofertas Exclusivas para Gamers 🎁 !</span>
+            <a href="#">VER MÁS</a>
+        </div>
+
+        <!-- Logo + buscador + redes + carrito -->
+
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">INFINITYPLAY
+                    <img src="../tienda_videojuegos/img/logo infinity.png" alt="logo" width="100" height="70">
+                </a>
+
+            
+                <!--buscador-->
+                <form class="d-flex search-bar flex-grow-1 mx-3">
+                    <input class="form-control me-2" type="search" placeholder="Buscar.....">
+                    <select class="form-select me-2">
+                        <option>Todos</option>
+                        <option>Ps5</option>
+                        <option>Xbox</option>
+                        <option>Pc</option>
+                    </select>
+                    <button class="btn btn-outline-light" type="submit">🔍</button>
+                </form>
+
+                <!-- Redes sociales -->
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <!-- Carrito -->
+                <div class="ms-3">
+                    <select class="form-select d-inline w-auto">
+                    <option>CLP</option>
+                    <option>USD</option>
+                    </select>
+                    <a href="#" class="btn btn-outline-light ms-2">🛒 Carrito</a>
+                </div>
+                
+            
+            
+            
+            
+            </div>
+        </nav>
+
+         <!-- Menú categorías -->
+        <div class="categories text-center">
+            <button class="btn btn-warning me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategorias" aria-controls="offcanvasCategorias">
+                CATEGORIAS
+            </button>
+            <a href="#">PS3</a>
+            <a href="#">PS4</a>
+            <a href="#">PS5</a>
+            <a href="#">PC</a>
+            <a href="#">XBOX</a>
+            <a href="#">NINTENDO</a>
+            <a href="#">GIFT CARD</a>
+            <a href="#">RECARGAS</a>
+            <a href="#">MEMBRESIAS</a>
+            <a href="#">PACKS</a>
+            <a href="#">OPINIONES</a>
+            <a href="#">PREMIOS</a>
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCategorias" aria-labelledby="offcanvasCategoriasLabel">
+            <div class="offcanvas-header">
+               <h5 class="offcanvas-title text-warning fw-bold" id="offcanvasCategoriasLabel">
+                    <i class="fas fa-th-large me-2"></i>Categorías
+                </h5>
+                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+            </div>
+            <div class="offcanvas-body">
+                 <!-- Perfil de usuario -->
+                <div class="d-flex align-items-center mb-4 p-2 rounded" style="background:#f5f5f5;">
+                    <img src="https://ui-avatars.com/api/?name=Invitado&background=222&color=fff" alt="Perfil" width="48" height="48" class="rounded-circle me-3">
+                    <div>
+                        <div class="fw-bold">Invitado</div>
+                        <a href="InicioSesion.html" class="btn btn-sm btn-warning mt-1">Iniciar sesión</a>
+                    </div>
+                </div>
+               <ul class="list-unstyled mb-0">
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-warning"></i>PS3</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-warning"></i>PS4</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-warning"></i>PS5</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-desktop me-2 text-warning"></i>PC</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fab fa-xbox me-2 text-success"></i>XBOX</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-danger"></i>NINTENDO</a></li>
+                    <li><hr class="my-2"></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gift me-2 text-primary"></i>GIFT CARD</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-bolt me-2 text-warning"></i>RECARGAS</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-crown me-2 text-warning"></i>MEMBRESIAS</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-box-open me-2 text-info"></i>PACKS</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-star me-2 text-warning"></i>OPINIONES</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-trophy me-2 text-warning"></i>PREMIOS</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- Portada -->
+        <section class="portada">
+            <h1>Bienvenido a EA SPORTS FC™ 26</h1>
+        </section>
+
+        <!-- Sección intermedia -->
+        <section class=" seccion-intermedia text-center my-5 px-3 text-white">
+            <div class="container">
+                <h2 class="mb-3">Descubre las novedades de FC™ 26</h2>
+                <p class="lead">Explora las mejoras en jugabilidad, los nuevos modos de juego y cómo puedes personalizar tu futbolista como nunca antes. Esta edición está diseñada para ofrecerte una experiencia más auténtica, profunda y divertida.</p>
+            </div>
+        </section>
+
+        <!-- Sección de características -->
+        <div class="container my-5">
+            <div class="row g-4">
+            
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4 feature-card">
+                <img src="../tienda_videojuegos/img/fc1.png" alt="Jugabilidad renovada">
+                <h2>JUGABILIDAD RENOVADA</h2>
+                <p>Juega a tu manera con mejoras más exigentes, posibles más inteligentes y de la inteligencia de juego más auténtica hasta la fecha. Los guardianes reaccionan de forma más realista, los regates son más precisos y los tiros más potentes.</p>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4 feature-card">
+                <img src="../tienda_videojuegos/img/fc3.png" alt="Modos de juego">
+                <h2>JUEGA A TU MANERA</h2>
+                <p>FC 26 introduce dos nuevos preajustes de estilo de juego: competitivo para Ultimate Team y Clubes, y casual para una experiencia más relajada. Cada modo tiene reglas únicas y físicas más realistas.</p>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4 feature-card">
+                <img src="../tienda_videojuegos/img/fc2.png" alt="Arquetipos">
+                <h2>CREA TU FUTBOLISTA</h2>
+                <p>Los arquetipos te permiten desarrollar tu Carrera como nunca antes. Elige el que se adapte a tu estilo y desbloquea habilidades únicas mientras progresas dentro y fuera del campo.</p>
+            </div>
+
+            <!-- Tarjeta 4 -->
+             <div class="col-md-4 feature-card">
+                <img src="../tienda_videojuegos/img/fc4.png" alt="Arquetipos">
+                <h2>DESCUBRE MÁS FORMAS DE COMPETIR EN FOOTBALL ULTIMATE TEAM</h2>
+                <p>Compite de formas nuevas en Football Ultimate Team™ con torneos y eventos en vivo, así como con una experiencia 
+                    renovada de Rivals y Champs. Los torneos pondrán a prueba tus habilidades con hasta cuatro rondas de fútbol de 
+                    eliminación, mientras que los Eventos en vivo añaden más variedad con competiciones temáticas y contenido durante
+                     toda la temporada. Las nuevas recompensas te permiten ganar recompensas adicionales o acelerar tu progreso semanal. 
+                     Además, EA SPORTS FC™ 26 lanza Challengers, una nueva competencia de fin de semana de segunda categoría diseñada para 
+                     jugadores en divisiones inferiores.</p>
+            </div>
+
+             <!-- Tarjeta 5 -->
+            <div class="col-md-4 feature-card">
+                <img src="../tienda_videojuegos/img/fc5.png" alt="Arquetipos">
+                <h2>ACEPTA NUEVOS DESAFÍOS EN CARRERA DE MÁNAGER Y DE FUTBOLISTA</h2>
+                <p>Vive la Carrera de Mánager como nunca antes con los nuevos Desafíos en vivo de Mánager a lo largo de la nueva temporada.
+                     Enfréntate a una variedad de escenarios del mundo real y líneas narrativas alternativas, que van desde unos minutos de 
+                     juego hasta múltiples temporadas, y gana recompensas que incluyen Puntos de temporada, estéticos e ICONOS y Héroes para
+                      usar en clubes actuales. Además, por primera vez en la historia, el movimiento en el Mercado de mánager hará que las 
+                      tácticas de equipo evolucionen con el tiempo con nuevos mánagers que toman el mando, cambiando la dinámica de cada nueva temporada.</p>
+            </div>
+
+                <!-- Tarjeta 6 -->
+             <div class="col-md-4 feature-card">
+                <img src="../tienda_videojuegos/img/fc6.png" alt="Arquetipos">
+                <h2>FORMA EQUIPO DURANTE TODA LA TEMPORADA EN CLUBES</h2>
+                <p>Forma equipo con nuevas grandes incorporaciones a Clubes en EA SPORTS FC™ 26. Experimenta más variedad durante la temporada 
+                    cuando juegues solo o con colegas del club en eventos en vivo dinámicos, con nuevos desafíos que tienen diferentes requisitos
+                     de entrada, jugabilidad modificada en Rush, y reglas alternativas, creando nuevas oportunidades para ganar recompensas durante 
+                     todo el año. Además, por primera vez, EA SPORTS FC™ 26 te permite afiliarte con hasta 3 clubes a la vez y convertirte en la 
+                     última línea de defensa en Rush de Clubes con la introducción de un sistema mejorado de Conviértete en guardameta.</p>
+            </div>
+
+            </div>
+        </div>
+
+        <!-- Sección de videos -->
+        <section class="container my-5">
+        <h2 class="text-center mb-4">Tráilers y Gameplay de FC™ 26</h2>
+        <div class="row g-4">
+
+            <!-- Video 1 -->
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/1ooNXhzMBv4" title="EA SPORTS FC 26 | Tráiler oficial de presentación" allowfullscreen></iframe>
+                </div>
+            </div>
+
+           
+
+            <!-- Video 2 -->
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/EabAJc-2F5k" title="EA SPORTS FC 26 | Official Gameplay Deep Dive" allowfullscreen></iframe>
+                </div>
+            </div>
+
+           
+
+           
+
+            <!-- Video 3 -->
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/z7gPHQbyG0U" title="EA SPORTS FC 26 | Tráiler Lanzamiento" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Video 4 -->
+              
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/N5sSedHxml8" title="EA SPORTS FC 26 | Tráiler Lanzamiento" allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+        </div>
+        </section>
+
+  </main>
+
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+                <!-- Logo y empresa -->
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <img src="../tienda_videojuegos/img/logo infinity.png" alt="logo" width="120" class="mb-2">
+                    <div>
+                        <small>&copy; 2025 INFINITYPLAY. Todos los derechos reservados.</small>
+                    </div>
+                    <div>
+                        <small>Creado por Isaac y Almendra</small>
+                    </div>
+                </div>
+
+                <!-- Información de la empresa -->
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <h6 class="text-warning">Información</h6>
+                    <small>Venta de videojuegos digitales, gift cards y membresías.<br>
+                    Entrega inmediata y soporte 24/7.<br>
+                    Santiago, Chile</small>
+                </div>
+
+                <!-- Contacto y redes sociales -->
+                <div class="col-md-4 text-center text-md-end">
+                    <h6>
+                        <a href="contacto.html" class="text-warning text-decoration-none">Contacto</a>
+                    </h6>
+                    <small>
+                        <i class="fas fa-envelope"></i> contacto@infinityplay.cl<br>
+                        <i class="fas fa-phone"></i> +56 9 1234 5678
+                    </small>
+                    <div class="mt-2">
+                        <a href="#" class="text-light me-3 fs-4"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3 fs-4"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3 fs-4"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="text-light fs-4"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                
+
+        </div>
+    </div>
+ </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
