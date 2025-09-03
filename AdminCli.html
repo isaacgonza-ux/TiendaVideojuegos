@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b981cc938e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Admin Tienda Gamer</a>
+                <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="adminProd.html">Videojuegos</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="AdminCli.html">Clientes</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+    <section id="videojuegos" class="container py-5">
+        <h2>Gestión de Videojuegos</h2>
+        <form class="row g-3 mb-4">
+            <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Nombre" name="Nombre">
+            </div>
+
+             <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Apellido" name="Apellido">
+            </div>
+
+            <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Usuario" name="Usuario">
+            </div>
+
+             <div class="col-md-4">
+            <input type="password" class="form-control" placeholder="Contraseña" name="Contraseña">
+            </div>
+
+            <div class="col-md-4">
+            <button type="submit" class="btn btn-success w-100">Agregar</button>
+            </div>
+
+            <div class="col-md-4">
+            <button type="submit" class="btn btn-success w-100">Listar</button>
+            </div>
+        </form>
+
+        <table class="table table-dark table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Usuario</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Aquí se renderizan los juegos desde el backend -->
+            <tr>
+                <td>1</td>
+                <td>Isaac</td>
+                <td>Gonzálezl</td>
+                <td>isa.duco</td>
+                <td>
+                <button class="btn btn-warning btn-sm">Editar</button>
+                <button class="btn btn-danger btn-sm">Eliminar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Almendra</td>
+                <td>Pereira</td>
+                <td>alm.duco</td>
+                <td>
+                <button class="btn btn-warning btn-sm">Editar</button>
+                <button class="btn btn-danger btn-sm">Eliminar</button>
+                </td>
+              
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>  
+</body>
+</html>
