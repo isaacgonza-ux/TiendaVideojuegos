@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Método de Pago</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <style>
     body {
-      background-color: #aeacac; /* Fondo morado */
+      background-color: #ffffff; /* Fondo morado */
       color: rgb(10, 0, 0);
     }
     .payment-option {
       background: #ffffff;
+       border: 2px solid black; /* 🔹 borde negro */
       border-radius: 10px;
       padding: 15px;
       margin-bottom: 15px;
@@ -33,7 +35,8 @@
       margin-left: 10px;
     }
     .summary-card {
-      background: #f3f3f5;
+      background: #fcfbfa;
+       border: 2px solid black; /* 🔹 borde negro */
       border-radius: 15px;
       padding: 20px;
     }
@@ -50,6 +53,35 @@
       color: #00ff00;
       font-weight: bold;
     }
+
+     /* Estilos del Footer */
+        footer {
+            background-color: #17161a;
+            padding: 40px 20px;
+            color: white;
+            text-align: center;
+        }
+        footer .payment-icons img {
+            margin: 0 10px;
+            width: 30px;
+            height: auto;
+        }
+        footer .footer-links {
+            margin-top: 20px;
+        }
+        footer .footer-links a {
+            color: #f5a623;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .text-primary {
+      color: purple !important; /* morado */
+    }
+
   </style>
 </head>
 <body>
@@ -58,7 +90,7 @@
       
       <!-- Métodos de pago -->
       <div class="col-md-6">
-        <h4 class="mb-4">Selecciona tu método de pago</h4>
+        <h4 class="mb-4 text-primary">Selecciona tu método de pago</h4>
         
         <div class="payment-option">
           <img src="https://cdn6.aptoide.com/imgs/1/5/9/159d3eedda7d5d811c27651d6c9ffcf0_fgraphic.jpg" alt="Eneba" width="80">
@@ -135,6 +167,21 @@
 
     </div>
   </div>
+   <!-- Footer -->
+    <footer>
+        <div class="payment-icons">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf0H2GDv1mx-8kIJ51OEwAfyri7_i7hUaUXw&s" alt="PayPal">
+            <img src="https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2021/05/Apple-Pay.jpg" alt="Apple Pay">
+            <img src="https://logos-world.net/wp-content/uploads/2020/12/Google-Play-Logo.png" alt="Google Pay">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/800px-MasterCard_Logo.svg.png" alt="Mastercard">
+        </div>
+        <div class="footer-links">
+            <p>¡Comprar en INFINITYPLAY es fácil y seguro!</p>
+            <p>Si surgiera algún inconveniente, nuestro equipo de soporte te ayudará con gusto. <a href="#">Crea un ticket</a> y nos pondremos en contacto contigo lo antes posible.</p>
+            <p>Copyright © 2025 INFINITYPLAY. Todos los derechos reservados.</p>
+            <a href="#">Términos y Condiciones</a> | <a href="#">Aviso de Privacidad</a> | <a href="#">Preferencias de cookies</a>
+        </div>
+    </footer>
 </body>
 </html>
 
