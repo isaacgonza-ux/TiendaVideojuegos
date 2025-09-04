@@ -79,33 +79,6 @@
         color: #fff; /* Asegura que el texto sea legible sobre el fondo */
     }
 
-     .fondo-Tlou2{
-        background-image: url('https://4kwallpapers.com/images/wallpapers/the-last-of-us-part-3840x2160-13727.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
-    }
-
-    .fondo-Fc26{
-        background-image: url('https://wallpapercave.com/wp/wp15596619.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
-    }
-
-    .fondo-Gow1{
-        background-image: url('https://image.api.playstation.com/vulcan/img/rnd/202010/2217/LsaRVLF2IU2L1FNtu9d3MKLq.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
-    }
-
 
     
     body::before {

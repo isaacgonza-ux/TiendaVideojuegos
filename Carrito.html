@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+      header{
+            background: #111; color: white; }
+        .top-bar {
+        background: #000;
+        font-size: 14px;
+        padding: 5px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .top-bar a {
+        background: orange;
+        color: black;
+        padding: 2px 8px;
+        text-decoration: none;
+        border-radius: 3px;
+        font-weight: bold;
+        }
+        .navbar-custom {
+        background: #1c1c1c;
+        padding: 10px 20px;
+        }
+        .navbar-custom .navbar-brand {
+        font-weight: bold;
+        color: orange;
+        }
+        .search-bar input {
+        border-radius: 0;
+        }
+        .categories {
+        background: #222;
+        }
+        .categories a {
+        color: white;
+        padding: 10px 15px;
+        display: inline-block;
+        text-decoration: none;
+        }
+        .categories a:hover {
+        background: orange;
+        color: black;
+        }
+        .social-icons a {
+        color: orange;
+        margin-left: 10px;
+        font-size: 18px;
+            }
+
+             /*menú*/
+    .offcanvas-categorias {
+        background: #222;
+    }
+    .offcanvas-categorias .categoria-link {
+        color: white;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        transition: background 0.2s, color 0.2s;
+    }
+    .offcanvas-categorias .categoria-link:hover {
+        background: orange;
+        color: black;
+    }
+    .categoria-link {
+        color: #222;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        font-weight: 500;
+        transition: background 0.2s, color 0.2s;
+    }
+.categoria-link:hover {
+    background: #ffe082;
+    color: #111;
+}
+
+
+        body {
+            background-color: #ffffff;
+            color: white;
+        }
+        /* Reducción de tamaño de las tarjetas */
+        .cart-container {
+            background-color: #6a4c9c;
+            padding: 15px;  /* Reducido padding */
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px;  /* Limitar ancho */
+            margin: 30px auto;  /* Centrando y agregando margen superior */
+        }
+        .cart-item {
+            background-color: #4e367d;
+            margin-bottom: 12px;  /* Reducido margen */
+            padding: 12px;  /* Reducido padding */
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cart-item img {
+            max-width: 60px;
+        }
+        .cart-item h5 {
+            margin: 0;
+            font-size: 1rem;
+        }
+        .cart-item p {
+            margin: 0;
+            font-size: 0.875rem;
+            color: #ccc;
+        }
+        .cart-item span {
+            font-size: 1.1rem;  /* Reducir tamaño del texto */
+            font-weight: bold;
+        }
+        .summary {
+            background-color: #5d3f82;
+            padding: 15px;  /* Reducir padding */
+            border-radius: 10px;
+            color: white;
+            max-width: 400px;  /* Limitar ancho */
+            margin: 30px auto;  /* Centrando y agregando margen superior */
+        }
+        .summary p {
+            margin: 10px 0;
+        }
+        .summary .btn-yellow {
+            background-color: #f5a623;
+            color: white;
+            width: 100%;
+            padding: 8px;  /* Reducir padding */
+        }
+        .summary .btn-yellow:hover {
+            background-color: #d9891b;
+        }
+        .summary .alert {
+            background-color: #ffffff;
+            border-color: #3b2b61;
+        }
+        .cart-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;  /* Reducir margen */
+        }
+
+        /* Estilos del Footer */
+        footer {
+            background-color: #211e1e;
+            padding: 40px 20px;
+            color: white;
+            text-align: center;
+        }
+        footer .payment-icons img {
+            margin: 0 10px;
+            width: 30px;
+            height: auto;
+        }
+        footer .footer-links {
+            margin-top: 20px;
+        }
+        footer .footer-links a {
+            color: #f5a623;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+  <header>
+
+
+        
+
+        <!--barra superior-->
+
+        <div class="top-bar">
+            <span>Eleva tu Juego en 2025 🎮 : ¡Ofertas Exclusivas para Gamers 🎁 !</span>
+            <a href="#">VER MÁS</a>
+        </div>
+
+        <!-- Logo + buscador + redes + carrito -->
+
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">INFINITYPLAY
+                    <img src="../tienda_videojuegos/img/logo infinity.png" alt="logo" width="100" height="70">
+                </a>
+
+            
+                <!--buscador-->
+                <form class="d-flex search-bar flex-grow-1 mx-3">
+                    <input class="form-control me-2" type="search" placeholder="Buscar.....">
+                    <select class="form-select me-2">
+                        <option>Todos</option>
+                        <option>Ps5</option>
+                        <option>Xbox</option>
+                        <option>Pc</option>
+                    </select>
+                    <button class="btn btn-outline-light" type="submit">🔍</button>
+                </form>
+
+                <!-- Redes sociales -->
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <!-- Carrito -->
+                <div class="ms-3">
+                    <select class="form-select d-inline w-auto">
+                    <option>CLP</option>
+                    <option>USD</option>
+                    </select>
+                    <a href="#" class="btn btn-outline-light ms-2">🛒 Carrito</a>
+                </div>
+                
+            
+            
+            
+            
+            </div>
+        </nav>
+
+         <!-- Menú categorías -->
+        <div class="categories text-center">
+            <button class="btn btn-warning me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategorias" aria-controls="offcanvasCategorias">
+                CATEGORIAS
+            </button>
+            <a href="#">PS3</a>
+            <a href="#">PS4</a>
+            <a href="#">PS5</a>
+            <a href="#">PC</a>
+            <a href="#">XBOX</a>
+            <a href="#">NINTENDO</a>
+            <a href="#">GIFT CARD</a>
+            <a href="#">RECARGAS</a>
+            <a href="#">MEMBRESIAS</a>
+            <a href="Descuentos.html">DESCUENTOS</a>
+            <a href="#">OPINIONES</a>
+            <a href="#">PREMIOS</a>
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCategorias" aria-labelledby="offcanvasCategoriasLabel">
+            <div class="offcanvas-header">
+               <h5 class="offcanvas-title text-warning fw-bold" id="offcanvasCategoriasLabel">
+                    <i class="fas fa-th-large me-2"></i>Categorías
+                </h5>
+                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+            </div>
+            <div class="offcanvas-body">
+                 <!-- Perfil de usuario -->
+                <div class="d-flex align-items-center mb-4 p-2 rounded" style="background:#f5f5f5;">
+                    <img src="https://ui-avatars.com/api/?name=Invitado&background=222&color=fff" alt="Perfil" width="48" height="48" class="rounded-circle me-3">
+                    <div>
+                        <div class="fw-bold">Invitado</div>
+                        <a href="InicioSesion.html" class="btn btn-sm btn-warning mt-1">Iniciar sesión</a>
+                    </div>
+                </div>
+               <ul class="list-unstyled mb-0">
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-warning"></i>PS3</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-warning"></i>PS4</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-warning"></i>PS5</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-desktop me-2 text-warning"></i>PC</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fab fa-xbox me-2 text-success"></i>XBOX</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gamepad me-2 text-danger"></i>NINTENDO</a></li>
+                    <li><hr class="my-2"></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-gift me-2 text-primary"></i>GIFT CARD</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-bolt me-2 text-warning"></i>RECARGAS</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-crown me-2 text-warning"></i>MEMBRESIAS</a></li>
+                    <li><a href="Descuentos.html" class="categoria-link"><i class="fas fa-box-open me-2 text-info"></i>DESCUENTOS</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-star me-2 text-warning"></i>OPINIONES</a></li>
+                    <li><a href="#" class="categoria-link"><i class="fas fa-trophy me-2 text-warning"></i>PREMIOS</a></li>
+                </ul>
+            </div>
+        </div>
+
+       
+
+
+    </header>
+
+ 
+
+    <!-- Contenido del carrito -->
+    <div class="container">
+        <div class="row">
+            <!-- Cart Items -->
+            <div class="col-md-8 cart-container">
+                <div class="cart-title">Mi carrito</div>
+                
+                <div class="cart-item">
+                    <div class="d-flex">
+                        <img src="https://4kwallpapers.com/images/wallpapers/minecraft-spring-to-1920x1080-21999.jpg" alt="Minecraft">
+                        <div class="ms-3">
+                            <h5>Minecraft: Java & Bedrock Edition (PC)</h5>
+                            <p>FlashDeals</p>
+                            <p>De Cashback: 3700 CLP</p>
+                        </div>
+                    </div>
+                    <span>16.816 CLP</span>
+                </div>
+                <div class="cart-item">
+                    <div class="d-flex">
+                        <img src="https://images.wallpapersden.com/image/download/dc-gotham-knights-4k-gaming_bWpnbG6UmZqaraWkpJRmbmdlrWZlbWU.jpg" alt="Gotham Knights">
+                        <div class="ms-3">
+                            <h5>Gotham Knights (PC)</h5>
+                            <p>GamersNest</p>
+                            <p>De Cashback: 186 CLP</p>
+                        </div>
+                    </div>
+                    <span>1.689 CLP</span>
+                </div>
+                <div class="cart-item">
+                    <div class="d-flex">
+                        <img src="https://i.imgur.com/nI5U8Ps.jpg" alt="DayZ">
+                        <div class="ms-3">
+                            <h5>DayZ (PC)</h5>
+                            <p>DayKey</p>
+                            <p>De Cashback: 186 CLP</p>
+                        </div>
+                    </div>
+                    <span>17.507 CLP</span>
+                </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="col-md-4 summary">
+                <h4>Resumen</h4>
+                <p><strong>Total: 72.025 CLP</strong></p>
+                <p>de Cashback: 3886 CLP</p>
+                <div class="alert alert-warning" role="alert">
+                    El cashback de uno o más productos en tu carrito no se aplicará ya que excederá tus productos diarios con un límite de reembolso de 3.
+                </div>
+                <button class="btn btn-yellow" onclick="location.href='pago.html'">Continuar con la compra</button>
+                <div class="mt-3">
+                    <label for="discount-code" class="form-label">¿Tienes un código de descuento?</label>
+                    <input type="text" class="form-control" id="discount-code" placeholder="Introduce tu código">
+                </div>
+                <div class="mt-3">
+                    <a href="#">Lee nuestras opiniones</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="payment-icons">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf0H2GDv1mx-8kIJ51OEwAfyri7_i7hUaUXw&s" alt="PayPal">
+            <img src="https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2021/05/Apple-Pay.jpg" alt="Apple Pay">
+            <img src="https://logos-world.net/wp-content/uploads/2020/12/Google-Play-Logo.png" alt="Google Pay">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/800px-MasterCard_Logo.svg.png" alt="Mastercard">
+        </div>
+        <div class="footer-links">
+            <p>¡Comprar en INFINITYPLAY es fácil y seguro!</p>
+            <p>Si surgiera algún inconveniente, nuestro equipo de soporte te ayudará con gusto. <a href="#">Crea un ticket</a> y nos pondremos en contacto contigo lo antes posible.</p>
+            <p>Copyright © 2025 INFINITYPLAY. Todos los derechos reservados.</p>
+            <a href="#">Términos y Condiciones</a> | <a href="#">Aviso de Privacidad</a> | <a href="#">Preferencias de cookies</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
