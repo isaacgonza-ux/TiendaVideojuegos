@@ -187,7 +187,7 @@
 
                 <!-- Sign In button with yellow color and redirect -->
                 <div class="d-grid mb-3">
-                    <a href="adminProd.html" class="btn btn-warning text-center">Iniciar sesión</a>
+                     <button type="submit" class="btn btn-warning text-center">Iniciar sesión</button>
                 </div>
 
 
@@ -199,6 +199,22 @@
             </form>
         </div>
     </div>
+    <script>
+        //javaScript para validar el formulario
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que se envíe de inmediato
+
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value.trim();
+
+        if (email === "" || password === "") {
+            alert("⚠️ Por favor completa todos los campos.");
+        } else {
+            // Si todo está correcto, redirige
+            window.location.href = "adminProd.html";
+        }
+    });
+</script>
     </main>
 
     <footer class="bg-dark text-light py-4 mt-5">
