@@ -79,6 +79,69 @@
         color: #fff; /* Asegura que el texto sea legible sobre el fondo */
     }
 
+    
+    .fondo-DemonSlayer{
+        background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202106/1708/eDwXFJuBPrroPQoFkuM6eRRJ.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+    }
+
+    .fondo-MetalGS{
+        background-image: url('https://images6.alphacoders.com/131/1316756.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+    }
+    .fondo-GTA5{
+        background-image: url('https://fotografias-neox.atresmedia.com/clipping/cmsimages02/2016/08/30/F1311F3B-298C-42B7-9D70-DD40576FAFC1/98.jpg?crop=624,351,x10,y0&width=1900&height=1069&optimize=high&format=webply');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+
+
+    }
+
+     .fondo-FC25{
+        background-image: url('https://images4.alphacoders.com/137/1371791.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+
+
+    }
+
+
+
+     /*fondo*/
+    .fondo-iniciar-Sesion {
+        background-image: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/07/analisis-stray-2761647.jpg?tf=3840x');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #080000; /* Asegura que el texto sea legible sobre el fondo */
+    }
+
+     /*fondo*/
+    .fondo-Registro-Usuario {
+        background-image: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/07/analisis-stray-2761647.jpg?tf=3840x');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #080000; /* Asegura que el texto sea legible sobre el fondo */
+    }
+
+
 
     
     body::before {
