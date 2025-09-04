@@ -43,6 +43,15 @@
         color: #fff; /* Asegura que el texto sea legible sobre el fondo */
     }
 
+     .fondo-Gow1{
+        background-image: url('https://image.api.playstation.com/vulcan/img/rnd/202010/2217/LsaRVLF2IU2L1FNtu9d3MKLq.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+    }
+
      .fondo-rdr2{
         background-image: url('https://www.xtrafondos.com/wallpapers/red-dead-redemption-2-portada-3380.jpg');
         background-size: cover;
@@ -70,8 +79,82 @@
         color: #fff; /* Asegura que el texto sea legible sobre el fondo */
     }
 
-    .fondo-Tlou1{
+   
+    .fondo-DemonSlayer{
+        background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202106/1708/eDwXFJuBPrroPQoFkuM6eRRJ.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+    }
+
+    .fondo-MetalGS{
+        background-image: url('https://images6.alphacoders.com/131/1316756.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+    }
+    .fondo-GTA5{
+        background-image: url('https://fotografias-neox.atresmedia.com/clipping/cmsimages02/2016/08/30/F1311F3B-298C-42B7-9D70-DD40576FAFC1/98.jpg?crop=624,351,x10,y0&width=1900&height=1069&optimize=high&format=webply');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+
+
+    }
+
+     .fondo-FC25{
+        background-image: url('https://images4.alphacoders.com/137/1371791.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+
+
+    }
+
+
+
+     /*fondo*/
+    .fondo-iniciar-Sesion {
+        background-image: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/07/analisis-stray-2761647.jpg?tf=3840x');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #080000; /* Asegura que el texto sea legible sobre el fondo */
+    }
+
+     /*fondo*/
+    .fondo-Registro-Usuario {
+        background-image: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/07/analisis-stray-2761647.jpg?tf=3840x');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #080000; /* Asegura que el texto sea legible sobre el fondo */
+    }
+
+
+
+
+     .fondo-Tlou1{
         background-image: url('https://preview.redd.it/4k-the-last-of-us-part-1-cover-art-wallpaper-v0-3z733s5snn491.png?auto=webp&s=5006fd8c534d41154836b3c333d692d59c01d8d1');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+    }
+
+    .fondo-Tlou2{
+        background-image: url('https://4kwallpapers.com/images/wallpapers/the-last-of-us-part-3840x2160-13727.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
