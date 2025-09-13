@@ -162,6 +162,15 @@
         color: #fff; /* Asegura que el texto sea legible sobre el fondo */
     }
 
+     .fondo-Fc26{
+        background-image: url('https://generacionxbox.com/wp-content/uploads/2023/09/ea-sports-fc-24-1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+    }
+
 
     
     body::before {
