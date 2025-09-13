@@ -1,3 +1,5 @@
+/*Menú*/
+
 /*Carrusel_DetalleProducto*/
 
 .splide__slide img {
@@ -163,7 +165,7 @@
     }
 
      .fondo-Fc26{
-        background-image: url('https://generacionxbox.com/wp-content/uploads/2023/09/ea-sports-fc-24-1.jpg');
+        background-image: url('img/ea-sports-portadafc26.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
