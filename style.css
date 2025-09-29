@@ -228,7 +228,7 @@ header{
         color: #fff; /* Asegura que el texto sea legible sobre el fondo */
     }
 
-     .fondo-Gtavl{
+     body.fondo-Gtavl{
         background-image: url('https://www.rockstargames.com/VI/_next/static/media/Jason_and_Lucia_02_With_Logos_landscape.93ab5523.jpg');
         background-size: cover;
         background-position: center;
@@ -238,7 +238,7 @@ header{
     }
 
    
-    .fondo-DemonSlayer{
+    body.fondo-DemonSlayer{
         background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202106/1708/eDwXFJuBPrroPQoFkuM6eRRJ.jpg');
         background-size: cover;
         background-position: center;
@@ -247,7 +247,7 @@ header{
         color: #fff; /* Asegura que el texto sea legible sobre el fondo */
     }
 
-    .fondo-MetalGS{
+    body.fondo-MetalGS{
         background-image: url('https://images6.alphacoders.com/131/1316756.png');
         background-size: cover;
         background-position: center;
@@ -255,7 +255,7 @@ header{
         background-repeat: no-repeat;
         color: #fff; /* Asegura que el texto sea legible sobre el fondo */
     }
-    .fondo-GTA5{
+    body.fondo-GTA5{
         background-image: url('https://fotografias-neox.atresmedia.com/clipping/cmsimages02/2016/08/30/F1311F3B-298C-42B7-9D70-DD40576FAFC1/98.jpg?crop=624,351,x10,y0&width=1900&height=1069&optimize=high&format=webply');
         background-size: cover;
         background-position: center;
@@ -266,7 +266,7 @@ header{
 
     }
 
-     .fondo-FC25{
+     body.fondo-FC25{
         background-image: url('https://images4.alphacoders.com/137/1371791.jpeg');
         background-size: cover;
         background-position: center;
@@ -302,7 +302,7 @@ header{
 
 
 
-     .fondo-Tlou1{
+     body.fondo-Tlou1{
         background-image: url('https://preview.redd.it/4k-the-last-of-us-part-1-cover-art-wallpaper-v0-3z733s5snn491.png?auto=webp&s=5006fd8c534d41154836b3c333d692d59c01d8d1');
         background-size: cover;
         background-position: center;
@@ -311,7 +311,7 @@ header{
         color: #fff; /* Asegura que el texto sea legible sobre el fondo */
     }
 
-    .fondo-Tlou2{
+    body.fondo-Tlou2{
         background-image: url('https://4kwallpapers.com/images/wallpapers/the-last-of-us-part-3840x2160-13727.jpg');
         background-size: cover;
         background-position: center;
